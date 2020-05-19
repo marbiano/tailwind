@@ -17,7 +17,7 @@
   }
 </style>
 
-<h1 class="mb-24 text-yellow-black-dark">About my work</h1>
+<h1 class="mb-24 text-yellow-black-dark">About you</h1>
 <p class="mb-8 ml-24">
   One of the most common challenges teams face when executing an incremental
   migration is handling the transition between the new and old systems.

@@ -1,6 +1,5 @@
 <script>
   export let onPrev;
-  export let onNext;
 </script>
 
 <style>
@@ -17,7 +16,7 @@
   }
 </style>
 
-<h1 class="mb-24 text-yellow-black-dark">About my work</h1>
+<h1 class="mb-24 text-yellow-black-dark">About the gig</h1>
 <p class="mb-8 ml-24">
   One of the most common challenges teams face when executing an incremental
   migration is handling the transition between the new and old systems.
@@ -38,5 +37,4 @@
 </p>
 <p class="mt-16 ml-24">
   <button type="button" on:click={onPrev}>Prev</button>
-  <button type="button" on:click={onNext}>Next</button>
 </p>
