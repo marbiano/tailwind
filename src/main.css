@@ -5,14 +5,52 @@
   src: url('/sohne.woff2') format('woff2'), url('/sohne.woff') format('woff');
 }
 
+:root {
+  --color-black: #10100f;
+  --color-white: #fff;
+  --color-yellow: #ffdb05;
+  --color-fg: var(--color-black);
+  --color-bg: var(--color-white);
+}
+
 body {
   font-family: Sohne, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
-  line-height: 1.75;
+  line-height: 1.66;
+  color: var(--color-fg);
+  background: var(--color-bg);
 }
 
 @tailwind components;
+
+.content h1 {
+  font-family: 'Sentinel A', 'Sentinel B';
+  @apply mb-24;
+  @apply font-bold;
+  @apply text-6xl;
+  @apply tracking-tighter;
+  @apply leading-none;
+}
+
+.content p {
+  max-width: 33em;
+  opacity: 0.66;
+  @apply mb-8;
+  @apply ml-24;
+}
+
+.content ul {
+  opacity: 0.75;
+  @apply mb-8;
+  @apply ml-24;
+  @apply list-disc;
+}
+
+.content li {
+  @apply mb-4;
+}
+
 @tailwind utilities;

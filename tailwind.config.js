@@ -2,9 +2,9 @@ module.exports = {
   purge: ['./src/**/*.svelte', './public/*.html'],
   theme: {
     extend: {
-      colors: {
-        'yellow-black-dark': '#10100f',
-        'yellow-black-light': '#767573'
+      backgroundColor: {
+        default: 'var(--color-bg-default)',
+        inverse: 'var(--color-bg-inverse)'
       }
     }
   },
