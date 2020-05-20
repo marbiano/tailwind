@@ -1,5 +1,4 @@
 <script>
-  import marked from "marked";
   import Slides from "./Slides";
   import One from "./slides/01";
   import "./main.css";
