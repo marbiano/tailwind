@@ -15,7 +15,7 @@
       onChangeStep(step + 1);
     }
 
-    if (event.keyCode === 37 && step > 1) {
+    if (event.keyCode === 37 && step > 0) {
       onChangeStep(step - 1);
     }
   }
@@ -56,7 +56,7 @@
   <button
     type="button"
     class="mr-2"
-    disabled={step === 1}
+    disabled={step === 0}
     on:click={() => onChangeStep(step - 1)}>
     &larr;
   </button>
@@ -68,7 +68,7 @@
   </button>
   {#if prune && [1, 2].includes(step)}
     <span class="text-sm text-gray-500 ml-4" out:fade={{ duration: 150 }}>
-      Tip: use arroy keys to navigate.
+      Tip: use arrow keys to navigate.
     </span>
   {/if}
 </div>
