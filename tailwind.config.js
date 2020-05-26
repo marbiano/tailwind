@@ -1,6 +1,10 @@
 module.exports = {
   purge: ['./src/**/*.svelte', './public/*.html'],
   theme: {
+    columnGap: {
+      md: '2rem',
+      lg: '4rem'
+    },
     extend: {
       backgroundColor: {
         default: 'var(--color-bg-default)',
@@ -9,5 +13,5 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: []
+  plugins: [require('tailwindcss-multi-column')()]
 };

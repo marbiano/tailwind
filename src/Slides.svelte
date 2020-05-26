@@ -1,4 +1,5 @@
 <script>
+  import { fade } from 'svelte/transition';
   import Slide from './Slide';
   import Slide01 from './slides/01.svelte';
   import Slide02 from './slides/02.svelte';
@@ -6,11 +7,71 @@
   import Slide04 from './slides/04.svelte';
   import Slide05 from './slides/05.svelte';
   export let step;
-
   export let onChangeStep;
+  export let prune;
+
+  function handleKeyUp(event) {
+    if ([32, 39].includes(event.keyCode) && step < 5) {
+      onChangeStep(step + 1);
+    }
+
+    if (event.keyCode === 37 && step > 1) {
+      onChangeStep(step - 1);
+    }
+  }
 </script>
 
-<div class="text-gray-500 mb-16">{step}/5</div>
+<style>
+  button {
+    border: 1px solid rgba(var(--color-fg-rgb), 0.1);
+    padding: 0 1rem;
+    border-radius: 3px;
+    color: rgba(var(--color-fg-rgb), 0.4);
+    background: var(--color-bg);
+  }
+
+  button:hover {
+    background: rgba(var(--color-fg-rgb), 0.015);
+    border-color: rgba(var(--color-fg-rgb), 0.075);
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button:disabled {
+    border: 1px solid rgba(var(--color-fg-rgb), 0.05);
+    color: rgba(var(--color-fg-rgb), 0.2);
+    cursor: default;
+  }
+
+  button:disabled:hover {
+    background: var(--color-bg);
+    border-color: rgba(var(--color-fg-rgb), 0.05);
+  }
+</style>
+
+<svelte:window on:keyup={handleKeyUp} />
+<div class="mb-16 flex items-center" in:fade={{ delay: 150 }}>
+  <button
+    type="button"
+    class="mr-2"
+    disabled={step === 1}
+    on:click={() => onChangeStep(step - 1)}>
+    &larr;
+  </button>
+  <button
+    type="button"
+    disabled={step === 5}
+    on:click={() => onChangeStep(step + 1)}>
+    &rarr;
+  </button>
+  {#if prune && [1, 2].includes(step)}
+    <span class="text-sm text-gray-500 ml-4" out:fade={{ duration: 150 }}>
+      Tip: use arroy keys to navigate.
+    </span>
+  {/if}
+</div>
 {#if step === 1}
   <Slide onNext={() => onChangeStep(2)}>
     <Slide01 />

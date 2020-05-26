@@ -17,6 +17,7 @@
     "postcss-cli": "^7.1.1",
     "snowpack": "^2.0.0-0",
     "svelte": "^3.21.0",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "tailwindcss-multi-column": "^1.0.2"
   }
 }

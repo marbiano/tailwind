@@ -14,10 +14,17 @@
 
 :root {
   --color-black: #10100f;
+  --color-black-rgb: 16, 16, 15;
   --color-white: #fff;
+  --color-white-rgb: 255, 255, 255;
   --color-yellow: #ffdb05;
+  --color-dark-gray: #585756;
+  --color-light-gray: #d0cdc9;
   --color-fg: var(--color-black);
   --color-bg: var(--color-white);
+  --color-fg-rgb: var(--color-black-rgb);
+  --color-bg-rgb: var(--color-white-rgb);
+  --color-copy: var(--color-dark-gray);
 }
 
 body {
@@ -43,24 +50,20 @@ body {
 }
 
 .content p {
-  max-width: 33em;
-  opacity: 0.66;
-  @apply mb-8;
-}
-
-.content ul {
-  opacity: 0.75;
-  @apply mb-12;
-  @apply list-disc;
-}
-
-.content li {
+  max-width: 29em;
+  color: var(--color-copy);
   @apply mb-4;
 }
 
 .content a {
   text-decoration: underline;
-  opacity: 0.6;
+  font-weight: bold;
+  color: var(--color-fg);
+}
+
+.content strong {
+  font-weight: bold;
+  color: var(--color-fg);
 }
 
 @tailwind utilities;

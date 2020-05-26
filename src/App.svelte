@@ -1,36 +1,52 @@
 <script>
-  import Slides from "./Slides";
-  import One from "./slides/01";
-  import "./main.css";
+  import Intro from './Intro.svelte';
+  import Slides from './Slides';
+  import One from './slides/01';
+  import './main.css';
 
+  let name = '';
   let step = 0;
   let darkMode = false;
+  let prune = true;
+
+  $: progress = step / 5;
+
+  const onChangeName = (newName) => {
+    name = newName;
+  };
 
   const onChangeStep = (newStep) => {
     step = newStep;
+    if (step > 2 && prune) {
+      prune = false;
+    }
   };
 
   const switchMode = () => (darkMode = !darkMode);
-
-  setTimeout(() => {
-    step = 1;
-  });
 </script>
 
 <style>
   .mode-switcher {
     font-size: 0;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: var(--color-fg);
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 2px solid var(--color-fg);
     border-radius: 50%;
     outline: none;
-    opacity: 0.15;
     transition: opacity 200ms;
   }
 
   .mode-switcher:hover {
-    opacity: 1;
+    background: var(--color-fg);
+  }
+
+  .progress-bar {
+    height: 0.33rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--color-fg);
+    transition: width 200ms;
   }
 </style>
 
@@ -45,14 +61,17 @@
       :root {
         --color-fg: var(--color-white);
         --color-bg: var(--color-black);
+        --color-fg-rgb: var(--color-white-rgb);
+        --color-bg-rgb: var(--color-black-rgb);
+        --color-copy: var(--color-light-gray);
       }
     </style>
   {/if}
 </svelte:head>
 
 <div class="root">
-  <div class="container mx-auto px-4 text-lg">
-    <header class="mt-8 flex justify-between">
+  <div class="container mx-auto px-8 text-lg">
+    <header class="mt-8 flex justify-between items-center">
       <img src="/logo.svg" class="block w-12" alt="logo" />
       <button
         class="mode-switcher"
@@ -61,9 +80,14 @@
         title="Switch mode">
         Go Dark
       </button>
+      <div class="progress-bar" style="width: {progress * 100}%" />
     </header>
     <div class="mt-32">
-      <Slides {step} {onChangeStep} />
+      {#if step === 0}
+        <Intro {name} {onChangeStep} {onChangeName} />
+      {:else}
+        <Slides {step} {onChangeStep} {prune} />
+      {/if}
     </div>
   </div>
 </div>
