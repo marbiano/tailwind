@@ -1,29 +1,17 @@
-<h1>About UI Engineering</h1>
+<h1>About the industry</h1>
+<p>The web dev field seems to be at an interesting point of inflection.</p>
 <p>
-  This is an exciting area to be working on lately. In the recent years theres
-  been an boom of tools, ideas and methodologies that help us to move the
-  industry forward. Stuff like:
-</p>
-<ul>
-  <li>Shared best practices</li>
-  <li>More robust algorithms</li>
-  <li>Better starting points</li>
-  <li>More complex user experiences</li>
-  <li>Faster delivery times</li>
-</ul>
-<p>
-  Now, I think all the above is truly beneficial, only if we are able to do all
-  that without having to force the end user to to pay a penalty tax, for our own
-  DX.
+  While the past six or seven years have been all about growing up as an
+  industry, today more and more people seem to be thinking about what’s coming
+  next. Is the Javascript the ring that will rule them all forever? Is the
+  Jamstack the best we can come up with? Or maybe it’s tiome for us to put our
+  developer experience where it belongs, and leave the runtime to be a safe
+  zone?
 </p>
 <p>
-  The future looks like deepening that initial wave of thinking, in order to
-  make our work to be more about meeting users needs, while having at our
-  disposal a set of tools that work with us in order to meet those needs.
+  No matter what the outcome will be, it’s pretty cleat that the rise of tools
+  like Next.js, Tailwind CSS, Netlify, Figma, Svelte, Snowpack and many others
+  are helping the industry to move forward. We need to keep thinking about
+  shipping early and often, while striving for high-quality performant websites.
 </p>
-<p>
-  <strong>tl;dr:</strong>
-  as a developer, I want to keep feeling excited about building websites,
-  without spending hours and hours tweaking toolsets. At the same time, I want
-  the outcome to be as good and fast and as computationally possible.
-</p>
+<p>There’s work to be done. Exciting times are yet to come.</p>

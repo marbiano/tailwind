@@ -1,19 +1,14 @@
-<h1>About the gig</h1>
+<h1>About connecting</h1>
 <p>
-  One of the most common challenges teams face when executing an incremental
-  migration is handling the transition between the new and old systems.
-  Fortunately, with Next.js there was never an issue with running both versions
-  at once. With out-of-the-box support for prefetching new pages while jumping
-  into the legacy app when needed, Zack and the team were able to easily migrate
-  pages one-by-one. And since the intermediary hybrid-site was intelligently
-  routed by Next.js, there was no need to maintain the overhead of explicitly
-  tracking the migration's progress in the code itself.
+  Hopefully you get to see this. In case you do and this message rings any bell,
+  feel free to
+  <a href="mailto:mbavio@gmail.com">email me</a>
+  with anything you got. Happy to talk, even if it’s just to share some thoughts
+  about the projects you got going on.
 </p>
 <p>
-  In fact, throughout the migration, the ability of Next.js to make the
-  extraction of common issues and patterns as easy as possible was a recurring
-  theme. With each new version of Next.js, Zack and the team found they were
-  constantly deleting internal code in favor of framework integrated tooling.
-  Whenever the team needed to incorporate a new technology, Next.js had either
-  first-class support or an endorsed example for them to follow.
+  My interest is genuine, and goes beyond the job opportunity itself. But it
+  definitely wouldn't hurt to get the gig so I can actually try to take actions
+  on the potential I see!
 </p>
+<p>Thanks for taking the time to read. You sir have a great day.</p>

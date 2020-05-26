@@ -1,5 +1,5 @@
 <script>
-  import { fade } from "svelte/transition";
+  import { fade } from 'svelte/transition';
   export let onPrev;
   export let onNext;
 </script>
@@ -8,7 +8,7 @@
   <div class="content">
     <slot />
   </div>
-  <div class="mt-16 ml-24">
+  <div class="mt-16">
     {#if onPrev}
       <button type="button" on:click={onPrev}>Prev</button>
     {/if}

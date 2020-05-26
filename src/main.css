@@ -5,6 +5,13 @@
   src: url('/sohne.woff2') format('woff2'), url('/sohne.woff') format('woff');
 }
 
+@font-face {
+  font-family: Sohne;
+  font-weight: 700;
+  src: url('/sohne-bold.woff2') format('woff2'),
+    url('/sohne-bold.woff') format('woff');
+}
+
 :root {
   --color-black: #10100f;
   --color-white: #fff;
@@ -22,16 +29,16 @@ body {
   line-height: 1.66;
   color: var(--color-fg);
   background: var(--color-bg);
+  transition: background 500ms, color 200ms;
 }
 
 @tailwind components;
 
 .content h1 {
-  font-family: 'Sentinel A', 'Sentinel B';
-  @apply mb-24;
+  @apply mb-12;
   @apply font-bold;
-  @apply text-6xl;
-  @apply tracking-tighter;
+  @apply text-4xl;
+  @apply tracking-tight;
   @apply leading-none;
 }
 
@@ -39,18 +46,21 @@ body {
   max-width: 33em;
   opacity: 0.66;
   @apply mb-8;
-  @apply ml-24;
 }
 
 .content ul {
   opacity: 0.75;
-  @apply mb-8;
-  @apply ml-24;
+  @apply mb-12;
   @apply list-disc;
 }
 
 .content li {
   @apply mb-4;
+}
+
+.content a {
+  text-decoration: underline;
+  opacity: 0.6;
 }
 
 @tailwind utilities;

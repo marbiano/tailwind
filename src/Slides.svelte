@@ -1,16 +1,16 @@
 <script>
-  import Slide from "./Slide";
-  import Slide01 from "./slides/01.svelte";
-  import Slide02 from "./slides/02.svelte";
-  import Slide03 from "./slides/03.svelte";
-  import Slide04 from "./slides/04.svelte";
-  import Slide05 from "./slides/05.svelte";
+  import Slide from './Slide';
+  import Slide01 from './slides/01.svelte';
+  import Slide02 from './slides/02.svelte';
+  import Slide03 from './slides/03.svelte';
+  import Slide04 from './slides/04.svelte';
+  import Slide05 from './slides/05.svelte';
   export let step;
 
   export let onChangeStep;
 </script>
 
-<div class="text-gray-500 mb-6">{step}/5</div>
+<div class="text-gray-500 mb-16">{step}/5</div>
 {#if step === 1}
   <Slide onNext={() => onChangeStep(2)}>
     <Slide01 />
