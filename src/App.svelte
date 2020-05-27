@@ -86,7 +86,7 @@
       {#if step === 0}
         <Intro {name} {onChangeStep} {onChangeName} />
       {:else}
-        <Slides {step} {onChangeStep} {prune} />
+        <Slides {step} {onChangeStep} {prune} {name} />
       {/if}
     </div>
   </div>

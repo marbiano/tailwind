@@ -4,6 +4,8 @@
   export let onChangeStep;
   export let onChangeName;
 
+  let participants;
+
   let customName;
   let prewords = ['It’s', 'I’m'];
   let intros = ['Hi! May I have your name?', 'Welcome. Who is it?'];
@@ -13,16 +15,18 @@
 
 <style>
   button {
-    border: 1px solid rgba(var(--color-fg-rgb), 0.25);
+    border: 1px solid rgba(var(--color-fg-rgb), 0.15);
     padding: 1rem 4rem;
     border-radius: 3px;
     color: rgba(var(--color-fg-rgb), 0.75);
-    background: var(--color-bg);
+    background: rgba(var(--color-fg-rgb), 0.02);
+    transition: border 100ms, background 100ms, color 100ms;
   }
 
   button:hover {
-    background: rgba(var(--color-fg-rgb), 0.02);
-    border-color: rgba(var(--color-fg-rgb), 0.15);
+    background: rgba(var(--color-fg-rgb), 0.035);
+    border-color: rgba(var(--color-fg-rgb), 0.25);
+    color: rgba(var(--color-fg-rgb), 1);
   }
 
   button:focus {
@@ -58,6 +62,8 @@
     color: rgba(var(--color-fg-rgb), 0.5);
     border-radius: 0 3px 3px 0;
     border: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .custom-input button:disabled {
@@ -78,15 +84,24 @@
     <p>
       My name is
       <strong>Martin Bavio</strong>
-      and I created this tiny little website in order to tell you a bit about
-      myself and why I think I could be a good fit for Tailwind UI. It's my
-      first time doing something like this, so expect grammar errors and me
-      talking a bit too much about myself. Apologies in advance for that! Now,
-      without any further introduction, welcome to my house.
+      . I work as a web developer and created this little website to tell you a
+      bit about myself and why I think I could be a good fit for
+      <a href="https://jobs.tailwindui.com/full-stack-developer">
+        this opportunity.
+      </a>
     </p>
-    <button type="button" on:click={() => onChangeStep(1)} class="mt-12">
+
+    <p>Without further ado, welcome to my place.</p>
+
+    <button type="button" on:click={() => onChangeStep(1)} class="mt-8">
       Let’s Go &rarr;
     </button>
+    <p class="note mt-32 text-base opacity-75">
+      I used this tiny project as an excuse to take Svelte and Snowpack for a
+      spin, and I enjoyed it!
+      <a href="https://github.com/marbiano/tailwind">Here’s the code</a>
+      in case you want to 👀.
+    </p>
   {:else}
     <ul class="flex items-center text-xl">
       <li class="mr-8">

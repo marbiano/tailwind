@@ -7,6 +7,7 @@
   import Slide04 from './slides/04.svelte';
   import Slide05 from './slides/05.svelte';
   export let step;
+  export let name;
   export let onChangeStep;
   export let prune;
 
@@ -96,6 +97,6 @@
   </Slide>
 {:else if step === 5}
   <Slide onPrev={() => onChangeStep(step - 1)}>
-    <Slide05 />
+    <Slide05 {name} />
   </Slide>
 {/if}

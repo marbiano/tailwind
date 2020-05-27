@@ -1,22 +1,16 @@
-<h1>About you</h1>
-<p>You two (three now?) seem like a bunch of laser focused folks.</p>
+<h1>My thoughts on Tailwind</h1>
+<p>You two seem like a bunch of lasers focused folks.</p>
 <p>
-  You invent things, you share stuff with other folks, you make a living of
-  that, all that while actively participating with your peers. You really seem
-  to be inspired people.
+  You create new things, you solve other people's problems, you actively
+  participate in the community, all that while making a living of it.
 </p>
 <p>
   You also seem to release quality stuff. I was never a fan of CSS frameworks.
-  But using Tailwind brought me back the delightful experience I had while using
-  Compass, only that much better because evolution has done its thing, as stated
-  before.
+  But using Tailwind is a delight, one that reminds me of Compass in the old
+  days. Refactoring UI seems very helpful. It's a reference that I would have
+  loved to have while trying to learn how to design an interface.
 </p>
 <p>
-  And Refactoring UI looks really good. I’d would have loved to have a reference
-  like this when I was trying to teach myself not to such at designing an
-  interface.
-</p>
-<p>
-  So yeah, you really seem to have a ton of motivation, talent and challenges.
-  And that deeply inspires me.
+  So yeah, you seem to have a ton of motivation, talent, and real challenges.
+  And that profoundly inspires me.
 </p>
