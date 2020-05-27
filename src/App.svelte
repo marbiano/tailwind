@@ -28,20 +28,11 @@
 </script>
 
 <style>
-  .mode-switcher {
-    background: var(--color-fg);
-  }
-
   .mode-switcher img {
-    width: 66%;
+    width: 100%;
   }
-
-  .is-dark .mode-switcher {
-    background: none;
-  }
-
   .is-dark .mode-switcher img {
-    width: 90%;
+    width: 80%;
   }
 
   .progress-bar {
@@ -85,14 +76,14 @@
         title="Switch mode">
         {#if darkMode}
           <img
-            src="/sun.svg"
-            alt="Turn on lights"
-            in:fly={{ y: 50, duration: 100, delay: 50 }} />
+            src="/moon.svg"
+            alt="Dark mode"
+            in:fly={{ y: -50, delay: 50, duration: 100 }} />
         {:else}
           <img
-            src="/moon.svg"
-            alt="Turn off lights"
-            in:fly={{ y: -50, delay: 50, duration: 100 }} />
+            src="/sun.svg"
+            alt="Light mode"
+            in:fly={{ y: 50, duration: 100, delay: 50 }} />
         {/if}
       </button>
       <div
