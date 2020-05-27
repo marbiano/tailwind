@@ -46,7 +46,7 @@ body {
   @apply font-bold;
   @apply text-4xl;
   @apply tracking-tight;
-  @apply leading-none;
+  @apply leading-normal;
 }
 
 .content p {
@@ -59,6 +59,12 @@ body {
   text-decoration: underline;
   font-weight: bold;
   color: var(--color-fg);
+  transition: color 200ms;
+}
+
+.content a:hover {
+  text-decoration: none;
+  color: var(--color-yellow);
 }
 
 .content strong {

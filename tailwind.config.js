@@ -1,17 +1,21 @@
 module.exports = {
   purge: ['./src/**/*.svelte', './public/*.html'],
   theme: {
-    columnGap: {
-      md: '2rem',
-      lg: '4rem'
-    },
     extend: {
       backgroundColor: {
         default: 'var(--color-bg-default)',
         inverse: 'var(--color-bg-inverse)'
+      },
+      width: {
+        '96': '24rem'
+      },
+      transitionProperty: {
+        width: 'width'
       }
     }
   },
-  variants: {},
-  plugins: [require('tailwindcss-multi-column')()]
+  variants: {
+    cursor: ['responsive', 'disabled']
+  },
+  plugins: []
 };

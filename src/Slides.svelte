@@ -24,11 +24,9 @@
 
 <style>
   button {
-    border: 1px solid rgba(var(--color-fg-rgb), 0.1);
-    padding: 0 1rem;
-    border-radius: 3px;
     color: rgba(var(--color-fg-rgb), 0.4);
     background: var(--color-bg);
+    border-color: rgba(var(--color-fg-rgb), 0.1);
   }
 
   button:hover {
@@ -36,14 +34,9 @@
     border-color: rgba(var(--color-fg-rgb), 0.075);
   }
 
-  button:focus {
-    outline: none;
-  }
-
   button:disabled {
-    border: 1px solid rgba(var(--color-fg-rgb), 0.05);
     color: rgba(var(--color-fg-rgb), 0.2);
-    cursor: default;
+    border-color: rgba(var(--color-fg-rgb), 0.05);
   }
 
   button:disabled:hover {
@@ -53,22 +46,29 @@
 </style>
 
 <svelte:window on:keyup={handleKeyUp} />
-<div class="mb-16 flex items-center" in:fade={{ delay: 150 }}>
+<div
+  class="mb-16 flex items-center justify-center md:justify-start"
+  in:fade={{ delay: 150 }}>
   <button
     type="button"
-    class="mr-2"
+    class="mr-4 md:mr-2 border border-solid rounded py-0 px-4 focus:outline-none
+    disabled:cursor-default shadow-sm"
     disabled={step === 0}
     on:click={() => onChangeStep(step - 1)}>
     &larr;
   </button>
   <button
     type="button"
+    class="border border-solid rounded py-0 px-4 focus:outline-none
+    disabled:cursor-default shadow-sm"
     disabled={step === 5}
     on:click={() => onChangeStep(step + 1)}>
     &rarr;
   </button>
   {#if prune && [1, 2].includes(step)}
-    <span class="text-sm text-gray-500 ml-4" out:fade={{ duration: 150 }}>
+    <span
+      class="text-sm text-gray-500 ml-4 hidden md:block"
+      out:fade={{ duration: 150 }}>
       Tip: use arrow keys to navigate.
     </span>
   {/if}

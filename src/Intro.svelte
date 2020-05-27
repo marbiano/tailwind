@@ -4,8 +4,6 @@
   export let onChangeStep;
   export let onChangeName;
 
-  let participants;
-
   let customName;
   let prewords = ['It’s', 'I’m'];
   let intros = ['Hi! May I have your name?', 'Welcome. Who is it?'];
@@ -14,59 +12,36 @@
 </script>
 
 <style>
-  button {
-    border: 1px solid rgba(var(--color-fg-rgb), 0.1);
-    padding: 1rem 4rem;
-    border-radius: 3px;
+  h1 span {
+    border-color: var(--color-yellow);
+  }
+
+  .button {
     color: rgba(var(--color-fg-rgb), 0.75);
     background: rgba(var(--color-fg-rgb), 0.02);
+    border-color: rgba(var(--color-fg-rgb), 0.1);
     transition: border 100ms, background 100ms, color 100ms;
   }
 
-  button:hover {
+  .button:hover {
+    color: rgba(var(--color-fg-rgb), 1);
     background: rgba(var(--color-fg-rgb), 0.035);
     border-color: rgba(var(--color-fg-rgb), 0.2);
-    color: rgba(var(--color-fg-rgb), 1);
-  }
-
-  button:focus {
-    outline: none;
-  }
-
-  h1 span {
-    border-bottom: 2px solid var(--color-yellow);
-  }
-
-  input {
-    display: inline-block;
-    background: transparent;
-    border: 1px solid rgba(var(--color-fg-rgb), 0.15);
-    padding: 1rem 1.5rem;
-    width: 24rem;
-  }
-
-  input:focus {
-    outline: none;
   }
 
   .custom-input {
-    position: relative;
+    border-color: rgba(var(--color-fg-rgb), 0.15);
   }
 
-  .custom-input button {
-    position: absolute;
+  .custom-button {
     top: 1px;
     right: 1px;
     bottom: 1px;
     background: rgba(var(--color-fg-rgb), 0.02);
     color: rgba(var(--color-fg-rgb), 0.5);
-    border-radius: 0 3px 3px 0;
-    border: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
-  .custom-input button:disabled {
+  .custom-button:disabled {
     background: rgba(var(--color-fg-rgb), 0.02);
     color: rgba(var(--color-fg-rgb), 0.33);
   }
@@ -76,7 +51,7 @@
   <h1>
     {#if name}
       Hi
-      <span>{name}</span>
+      <span class="border-b-2 border-b-solid">{name}</span>
       , nice to meet you!
     {:else}{randomItem(intros)}{/if}
   </h1>
@@ -93,7 +68,11 @@
 
     <p>Without further ado, welcome to my place.</p>
 
-    <button type="button" on:click={() => onChangeStep(1)} class="mt-8">
+    <button
+      class="button block rounded border border-solid py-4 px-16 w-full
+      md:w-auto focus:outline-none mt-8 shadow-sm"
+      type="button"
+      on:click={() => onChangeStep(1)}>
       Let’s Go &rarr;
     </button>
     <p class="note mt-32 text-base opacity-75">
@@ -103,23 +82,36 @@
       in case you want to 👀.
     </p>
   {:else}
-    <ul class="flex items-center text-xl">
-      <li class="mr-8">
-        <button type="button" on:click={() => onChangeName('Adam')}>
+    <ul class="md:flex items-center text-xl">
+      <li class="mb-8 md:mb-0 md:mr-8">
+        <button
+          class="button block rounded border border-solid py-4 px-16 w-full
+          md:w-auto focus:outline-none shadow-sm"
+          type="button"
+          on:click={() => onChangeName('Adam')}>
           {randomItem(prewords)} Adam
         </button>
       </li>
-      <li class="mr-8">
-        <button type="button" on:click={() => onChangeName('Steve')}>
+      <li class="mb-8 md:mb-0 md:mr-8">
+        <button
+          class="button block rounded border border-solid py-4 px-16 w-full
+          md:w-auto focus:outline-none shadow-sm"
+          type="button"
+          on:click={() => onChangeName('Steve')}>
           {randomItem(prewords)} Steve
         </button>
       </li>
-      <li class="custom-input">
+      <li class="relative">
         <input
+          class="custom-input inline-block bg-transparent rounded border
+          border-solid py-4 px-6 w-full md:w-96 focus:outline-none shadow-sm"
           bind:this={customName}
           on:keyup={(e) => e.code === 'Enter' && onChangeName(customName.value)}
           placeholder="Somebody else..." />
-        <button type="button" on:click={() => onChangeName(customName.value)}>
+        <button
+          class="custom-button absolute px-8 rounded focus:outline-none"
+          type="button"
+          on:click={() => onChangeName(customName.value)}>
           &rarr;
         </button>
       </li>

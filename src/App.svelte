@@ -29,17 +29,7 @@
 
 <style>
   .mode-switcher {
-    font-size: 0;
-    width: 2rem;
-    height: 2rem;
     background: var(--color-fg);
-    border-radius: 50%;
-    outline: none;
-    transition: opacity 200ms;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
   }
 
   .mode-switcher img {
@@ -55,12 +45,7 @@
   }
 
   .progress-bar {
-    height: 0.33rem;
-    position: fixed;
-    top: 0;
-    left: 0;
     background: var(--color-fg);
-    transition: width 200ms;
   }
 </style>
 
@@ -88,11 +73,13 @@
     <header class="mt-8 flex justify-between items-center">
       <img
         src="/logo.svg"
-        class="block w-12 cursor-pointer"
+        class="block w-8 md:w-12 cursor-pointer"
         alt="logo"
         on:click={() => onChangeStep(0)} />
       <button
-        class="mode-switcher"
+        class="mode-switcher w-8 h-8 rounded-full focus:outline-none flex
+        items-center justify-center overflow-hidden transition-colors
+        duration-200"
         type="button"
         on:click={switchMode}
         title="Switch mode">
@@ -108,7 +95,9 @@
             in:fly={{ y: -50, delay: 50, duration: 100 }} />
         {/if}
       </button>
-      <div class="progress-bar" style="width: {progress * 100}%" />
+      <div
+        class="progress-bar fixed top-0 left-0 h-1 transition-width duration-200"
+        style="width: {progress * 100}%" />
     </header>
     <div class="mt-32">
       {#if step === 0}
