@@ -7,7 +7,7 @@
   In case my words ring any bell, feel free to
   <a href="mailto:mbavio@gmail.com">email me</a>
   with anything you got. Happy to talk, even if it’s just to share thoughts
-  about the projects you got going on.
+  about the projects you run.
 </p>
 <p>
   My interest is real and goes beyond the job opportunity itself. But it
