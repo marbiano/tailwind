@@ -19,6 +19,7 @@
 </p>
 <p>
   Lately, I’ve been working primarily as a freelance frontend developer. But I’m
-  missing a key ingredient in my work life, which is to have a real purpose that
-  drives me into solving all kinds of problems.
+  missing a key ingredient in my work life, which is to have
+  <strong>a real purpose</strong>
+  that drives me into solving all kinds of problems.
 </p>

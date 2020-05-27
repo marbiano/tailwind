@@ -22,12 +22,16 @@
   participate in the community, all that while making a living of it.
 </p>
 <p>
-  You also seem to release quality stuff. I was never a fan of CSS frameworks.
-  But using Tailwind is a delight, one that reminds me of Compass in the old
-  days. Refactoring UI seems very helpful. It's a reference that I would have
-  loved to have while trying to learn how to design an interface.
+  You also seem torelease quality stuff
+  <strong>release quality stuff</strong>
+  . I was never a fan of CSS frameworks. But using Tailwind is a delight, one
+  that reminds me of
+  <a href="http://compass-style.org">Compass</a>
+  in the old days. Refactoring UI seems very helpful. It's a reference that I
+  would have loved to have while trying to learn how to design an interface.
 </p>
 <p>
-  So yeah, you seem to have a ton of motivation, talent, and real challenges.
-  And that profoundly inspires me.
+  So yeah, you seem to havea ton of motivation, talent, and real challenges
+  <strong>a ton of motivation, talent, and real challenges</strong>
+  . And that profoundly inspires me.
 </p>

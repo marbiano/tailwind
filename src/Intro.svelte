@@ -15,7 +15,7 @@
 
 <style>
   button {
-    border: 1px solid rgba(var(--color-fg-rgb), 0.15);
+    border: 1px solid rgba(var(--color-fg-rgb), 0.1);
     padding: 1rem 4rem;
     border-radius: 3px;
     color: rgba(var(--color-fg-rgb), 0.75);
@@ -25,7 +25,7 @@
 
   button:hover {
     background: rgba(var(--color-fg-rgb), 0.035);
-    border-color: rgba(var(--color-fg-rgb), 0.25);
+    border-color: rgba(var(--color-fg-rgb), 0.2);
     color: rgba(var(--color-fg-rgb), 1);
   }
 

@@ -1,4 +1,5 @@
 <script>
+  import { fly } from 'svelte/transition';
   import Intro from './Intro.svelte';
   import Slides from './Slides';
   import One from './slides/01';
@@ -28,16 +29,28 @@
 <style>
   .mode-switcher {
     font-size: 0;
-    width: 1.75rem;
-    height: 1.75rem;
-    border: 2px solid var(--color-fg);
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-fg);
     border-radius: 50%;
     outline: none;
     transition: opacity 200ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 
-  .mode-switcher:hover {
-    background: var(--color-fg);
+  .mode-switcher img {
+    width: 66%;
+  }
+
+  .is-dark .mode-switcher {
+    background: none;
+  }
+
+  .is-dark .mode-switcher img {
+    width: 90%;
   }
 
   .progress-bar {
@@ -69,7 +82,7 @@
   {/if}
 </svelte:head>
 
-<div class="root">
+<div class="root {darkMode ? 'is-dark' : ''}">
   <div class="container mx-auto px-8 text-lg">
     <header class="mt-8 flex justify-between items-center">
       <img
@@ -82,7 +95,17 @@
         type="button"
         on:click={switchMode}
         title="Switch mode">
-        Go Dark
+        {#if darkMode}
+          <img
+            src="/sun.svg"
+            alt="Turn on lights"
+            in:fly={{ y: 50, duration: 100, delay: 50 }} />
+        {:else}
+          <img
+            src="/moon.svg"
+            alt="Turn off lights"
+            in:fly={{ y: -50, delay: 50, duration: 100 }} />
+        {/if}
       </button>
       <div class="progress-bar" style="width: {progress * 100}%" />
     </header>

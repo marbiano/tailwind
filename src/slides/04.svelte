@@ -8,8 +8,8 @@
 </p>
 <p>
   Tailwind CSS is already a significant player in this area and feels to me like
-  Tailwind UI could become a huge thing. With the kind of audience that you got,
-  nothing would stop you from writing your own dynamic site generator, or
+  Tailwind UI could become a huge thing . With the kind of audience that you
+  got, nothing would stop you from writing your own dynamic site generator, or
   replace PostCSS with a parser that suits your needs in a more tailor-made way.
   The sky seems to be the limit.
 </p>
