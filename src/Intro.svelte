@@ -72,7 +72,7 @@
   }
 </style>
 
-<div class="content" in:fade={{ delay: 300 }} out:fade={{ duration: 150 }}>
+<div class="content" in:fade={{ delay: 250 }} out:fade={{ duration: 150 }}>
   <h1>
     {#if name}
       Hi
