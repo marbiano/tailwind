@@ -108,12 +108,14 @@
         </button>
       </li>
       <li class="relative">
+        <label class="hidden" for="custom-name">Your name</label>
         <input
           class="custom-input inline-block bg-transparent rounded border
           border-solid py-4 px-6 w-full md:w-96 focus:outline-none shadow-sm"
           bind:this={customName}
           on:keyup={(e) => e.code === 'Enter' && onChangeName(customName.value)}
-          placeholder="Somebody else..." />
+          placeholder="Somebody else..."
+          id="custom-name" />
         <button
           class="custom-button absolute px-8 rounded focus:outline-none"
           type="button"
