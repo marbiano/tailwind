@@ -7,7 +7,8 @@
 
   let name = '';
   let step = 0;
-  let darkMode = false;
+  let hours = new Date().getHours();
+  let darkMode = hours < 6 || hours > 19;
   let prune = true;
 
   $: progress = step / 5;
