@@ -1,5 +1,22 @@
+<script>
+  export let name = '';
+
+  $: genIntro = (name) => {
+    switch (name) {
+      case 'Steve':
+        return 'Adam and you';
+      case 'Adam':
+        return 'Steve and you';
+      case '':
+        return 'You two';
+      default:
+        return 'Those folks';
+    }
+  };
+</script>
+
 <h1>My thoughts on Tailwind</h1>
-<p>You two seem like a bunch of lasers focused folks.</p>
+<p>{genIntro(name)} seem like a bunch of lasers focused folks.</p>
 <p>
   You create new things, you solve other people's problems, you actively
   participate in the community, all that while making a living of it.

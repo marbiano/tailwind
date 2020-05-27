@@ -87,7 +87,7 @@
   <Slide
     onPrev={() => onChangeStep(step - 1)}
     onNext={() => onChangeStep(step + 1)}>
-    <Slide03 />
+    <Slide03 {name} />
   </Slide>
 {:else if step === 4}
   <Slide

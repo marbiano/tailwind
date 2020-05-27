@@ -115,7 +115,10 @@
         </button>
       </li>
       <li class="custom-input">
-        <input bind:this={customName} placeholder="Somebody else..." />
+        <input
+          bind:this={customName}
+          on:keyup={(e) => e.code === 'Enter' && onChangeName(customName.value)}
+          placeholder="Somebody else..." />
         <button type="button" on:click={() => onChangeName(customName.value)}>
           &rarr;
         </button>

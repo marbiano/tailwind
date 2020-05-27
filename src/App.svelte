@@ -72,7 +72,11 @@
 <div class="root">
   <div class="container mx-auto px-8 text-lg">
     <header class="mt-8 flex justify-between items-center">
-      <img src="/logo.svg" class="block w-12" alt="logo" />
+      <img
+        src="/logo.svg"
+        class="block w-12 cursor-pointer"
+        alt="logo"
+        on:click={() => onChangeStep(0)} />
       <button
         class="mode-switcher"
         type="button"
