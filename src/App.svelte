@@ -41,11 +41,6 @@
 </style>
 
 <svelte:head>
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://cloud.typography.com/6916494/7728412/css/fonts.css" />
-
   {#if darkMode}
     <style>
       :root {
