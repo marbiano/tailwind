@@ -5,8 +5,14 @@
   export let onChangeName;
 
   let customName;
-  let prewords = ['It’s', 'I’m'];
-  let intros = ['Hi! May I have your name?', 'Welcome. Who is it?'];
+  let prewords = ['It’s', 'I’m', ''];
+  let intros = [
+    'Hi! May I have your name?',
+    'Welcome. Who is it?',
+    'You’re...',
+    'Hey, howdy, hi! Who is it in there?',
+    'Hello, mister...'
+  ];
 
   const randomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 </script>
